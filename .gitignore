@@ -1,5 +1,15 @@
-config.json
-*.token
-*.secret
-venv/
+# Sensitive Configs
+config/config.json
+config/kite_session.json
+
+# System & Environment
 __pycache__/
+*.pyc
+venv/
+.env
+
+# Data & Logs (Local only)
+data/
+logs/
+db/trades.db
+backtest_results.csv
