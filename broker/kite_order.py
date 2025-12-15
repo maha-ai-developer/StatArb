@@ -1,4 +1,3 @@
-# broker/kite_order.py
 import logging
 from broker.kite_auth import get_kite
 
@@ -7,29 +6,24 @@ def place_order(
     transaction_type: str,
     quantity: int,
     product: str = "MIS",
-    order_type: str = "LIMIT",  # Changed default to LIMIT
-    price: float = 0.0,         # Required for LIMIT orders
+    order_type: str = "LIMIT",
+    price: float = 0.0,
     trigger_price: float = 0.0,
     exchange: str = "NSE",
     tag: str = "algo",
     kite = None
 ):
     """
-    Places a LIMIT order by default to avoid slippage.
+    Places a regular Limit or Market order.
     """
     if kite is None:
         try:
             kite = get_kite()
         except Exception as e:
             print(f"[Order] Critical: Could not connect to Kite: {e}")
-            raise e
+            return None
 
-    # SAFETY LOCK (Remove this if you want to trade full quantity)
-    if quantity > 1:
-        print(f"[Safety] Reducing Quantity from {quantity} to 1.")
-        quantity = 1
-
-    print(f"[Order] Sending: {transaction_type} {quantity} {symbol} @ {price} ({product})")
+    print(f"[Order] Sending: {transaction_type} {quantity} {symbol} @ {price} ({order_type})")
 
     try:
         order_id = kite.place_order(
@@ -62,17 +56,13 @@ def place_gtt(
 ):
     """
     Places an OCO (One-Cancels-Other) GTT for Stop Loss and Target.
-    This runs on Zerodha's server, so it works even if your internet fails.
     """
     if kite is None:
         kite = get_kite()
 
-    # Determine type (BUY positions need SELL GTT, and vice versa)
+    # Determine counter-direction (If bought, we need SELL GTT)
     gtt_type = kite.TRANSACTION_TYPE_SELL if transaction_type == "BUY" else kite.TRANSACTION_TYPE_BUY
     
-    # Create the OCO Trigger
-    # Trigger 1: Stop Loss
-    # Trigger 2: Target
     try:
         trigger_id = kite.place_gtt(
             trigger_type=kite.GTT_TYPE_OCO,
@@ -87,7 +77,7 @@ def place_gtt(
                     "transaction_type": gtt_type,
                     "quantity": quantity,
                     "order_type": "LIMIT",
-                    "product": "CNCO",  # GTT usually creates CNC/NRML orders, but works for exiting
+                    "product": "CNCO",
                     "price": stop_loss_price,
                 },
                 {

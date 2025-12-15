@@ -1,103 +1,85 @@
-# backtest/engine.py
-from typing import Dict
 import pandas as pd
-from tabulate import tabulate
+import pandas_ta_classic as ta
+from strategies.momentum_strategy import MomentumStrategy
 
-from strategies.combined_stack import compute_signals
-from core.indicators import compute_all_indicators
-
-def simple_backtest(df: pd.DataFrame, initial_capital: float = 100000.0) -> Dict:
+def run_backtest(csv_path, symbol, exchange="NSE", timeframe="5m", capital=100000):
     """
-    Executes trades based on the 'signal' column.
+    Simulates a backtest using the MomentumStrategy class.
     """
-    position = 0
-    entry_price = 0.0
-    equity = initial_capital
-    
-    # Statistics
-    trades_count = 0
-    wins = 0
-    
-    for ts, row in df.iterrows():
-        signal = row.get("signal", "HOLD")
-        price = float(row["close"])
-
-        # BUY Logic (Long Entry)
-        if signal == "BUY" and position == 0:
-            qty = int(equity // price)
-            if qty > 0:
-                position = qty
-                entry_price = price
-                equity -= position * price
-
-        # SELL Logic (Long Exit)
-        elif signal == "SELL" and position > 0:
-            revenue = position * price
-            profit = revenue - (position * entry_price)
-            equity += revenue
-            
-            trades_count += 1
-            if profit > 0: wins += 1
-            
-            position = 0
-            entry_price = 0.0
-
-    # Mark to market final position
-    if position > 0:
-        last_price = float(df.iloc[-1]["close"])
-        equity += position * last_price
-
-    ret_pct = (equity / initial_capital - 1) * 100
-    win_rate = (wins / trades_count * 100) if trades_count > 0 else 0.0
-
-    results = [
-        ["Initial Capital", initial_capital],
-        ["Final Equity", f"{equity:.2f}"],
-        ["Return %", f"{ret_pct:.2f}%"],
-        ["Total Trades", trades_count],
-        ["Win Rate", f"{win_rate:.1f}%"]
-    ]
-
-    # Optional: Comment out print if you want silent batch runs
-    # print("\n" + tabulate(results, headers=["Metric", "Value"], tablefmt="grid"))
-    
-    return {
-        "final_equity": equity, 
-        "return_pct": ret_pct,
-        "trades": trades_count,
-        "win_rate": win_rate
-    }
-
-
-def run_backtest(csv_path: str, initial_capital: float = 100000.0, **kwargs) -> Dict:
-    """
-    Main entry point. Accepts extra args (symbol, exchange) via kwargs.
-    """
+    # 1. Load Data
     try:
         df = pd.read_csv(csv_path)
-    except FileNotFoundError:
-        print(f"[Error] File not found: {csv_path}")
-        return {}
+        if len(df) < 50: return None
+    except:
+        return None
 
-    # 1. Normalize columns
-    df.rename(columns={c: c.lower().strip() for c in df.columns}, inplace=True)
+    # 2. Initialize Strategy (Standard Defaults)
+    strategy = MomentumStrategy(timeframe=timeframe, ema_period=20, rsi_period=14, rsi_limit=55)
     
-    # 2. Parse Dates
-    if "date" in df.columns:
-        df["date"] = pd.to_datetime(df["date"])
-        df.set_index("date", inplace=True)
-    elif "timestamp" in df.columns:
-        df["timestamp"] = pd.to_datetime(df["timestamp"])
-        df.set_index("timestamp", inplace=True)
+    # Pre-calculate indicators for speed (Optimization)
+    # The strategy usually does this inside get_signal, but for backtest speed we do it once
+    df['ema'] = ta.ema(df['close'], length=20)
+    df['rsi'] = ta.rsi(df['close'], length=14)
+    df['atr'] = ta.atr(df['high'], df['low'], df['close'], length=14)
 
-    # 3. Check columns
-    required = {"open", "high", "low", "close", "volume"}
-    if not required.issubset(df.columns):
-        print(f"[Error] CSV missing columns. Found: {df.columns.tolist()}")
-        return {}
+    position = 0
+    entry_price = 0.0
+    trades = 0
+    wins = 0
+    
+    current_capital = capital
+    
+    # 3. Event Loop
+    # We start at index 50 to allow indicators to warm up
+    for i in range(50, len(df)):
+        row = df.iloc[i]
+        
+        # Extract Signal
+        # We manually check logic here to mimic the strategy's 'get_signal' 
+        # because calling the full function 50,000 times is slower in Python loops.
+        # This Logic MATCHES strategies/momentum_strategy.py
+        
+        # BUY LOGIC
+        if position == 0:
+            if row['close'] > row['ema'] and row['rsi'] > 55:
+                # Buy Max Shares
+                qty = int(current_capital / row['close'])
+                if qty > 0:
+                    position = qty
+                    entry_price = row['close']
+                    current_capital -= (qty * entry_price)
+        
+        # SELL LOGIC
+        elif position > 0:
+            # Exit if price drops below EMA (Trend break)
+            # OR RSI gets too weak (< 45)
+            if row['close'] < row['ema'] or row['rsi'] < 45:
+                exit_price = row['close']
+                pnl = (exit_price - entry_price) * position
+                
+                current_capital += (position * exit_price)
+                
+                trades += 1
+                if pnl > 0: wins += 1
+                position = 0
 
-    # 4. Generate Signals (Rolling)
-    df = compute_signals(df)
+    # 4. Final Calculation
+    # Close any open position at the last candle
+    if position > 0:
+        final_price = df.iloc[-1]['close']
+        current_capital += (position * final_price)
+        # Note: We don't count this as a 'trade' for win-rate stats strictly, 
+        # but we add the equity value.
 
-    # 5. Run Execution Simulation
-    return simple_backtest(df, initial_capital)
+    total_pnl = current_capital - capital
+    win_rate = (wins / trades * 100) if trades > 0 else 0.0
+    return_pct = (total_pnl / capital) * 100
+
+    return {
+        "symbol": symbol,
+        "total_pnl": round(total_pnl, 2),
+        "final_equity": round(current_capital, 2),
+        "trades": trades,
+        "win_rate": round(win_rate, 2),
+        "return_pct": round(return_pct, 2)
+    }
