@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+*.egg-info/
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Testing
+.pytest_cache/
+.coverage
+
+# Secrets
+.env
+infrastructure/config/config.json
+
+# Data (large files)
+data/historical/*.csv
+data/cache/*.json
+data/*.db
+
+# Artifacts (regenerated)
+data/artifacts/*.json
+data/artifacts/*.csv
+
+# Logs
+*.log
+
+# OS
+.DS_Store
