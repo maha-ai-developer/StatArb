@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "METAL",
+    "niche_industry": "Steel",
+    "sector_kpis": {
+      "kpi_1": "EBITDA/Tonne (India): ~\u20b913,526",
+      "kpi_2": "Capacity Utilization: ~98%",
+      "kpi_3": "Net Debt/EBITDA: ~3.4x"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-24T22:16:06.303392",
+  "_symbol": "TATASTEEL"
+}

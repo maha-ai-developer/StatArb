@@ -1,0 +1,22 @@
+# Broker & Data
+kiteconnect
+requests
+
+# Data Analysis & Math
+pandas
+numpy
+pandas_ta_classic
+statsmodels
+scipy
+
+# Database (Infrastructure)
+SQLAlchemy
+psycopg2-binary
+
+# AI Agent
+google-genai
+
+# Utilities & CLI
+tabulate
+python-dotenv
+tqdm

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 12.37,
+      "profit_growth_3yr_avg": -4.3,
+      "roe_latest": 9.25,
+      "roce_latest": 11.18,
+      "pe_ratio": 46.47,
+      "debt_to_equity": 0.25,
+      "beta": 0.97
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1544,
+      "growth_rate_projection": 12.0,
+      "shares_outstanding_cr": 29.47,
+      "net_debt_cr": 17669,
+      "tax_rate": 25.6
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "UltraTech Cement is the flagship company of the Aditya Birla Group, known for high corporate governance standards. Management has successfully executed a massive capacity expansion strategy (aiming for 200 MTPA) while maintaining a healthy balance sheet. Despite the capital-intensive nature of the business and aggressive capex (which currently suppresses FCF), the company maintains a dominant market leadership position in India. The management's focus on cost efficiencies, green energy adoption, and strategic acquisitions (like India Cements and Kesoram) demonstrates strong long-term vision and execution capabilities."
+    }
+  },
+  "_cached_at": "2025-12-24T21:54:32.721775",
+  "_symbol": "ULTRACEMCO"
+}

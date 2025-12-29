@@ -1,0 +1,15 @@
+[
+  {
+    "leg1": "NESTLEIND",
+    "leg2": "TATACONSUM",
+    "beta": 0.7434,
+    "intercept": 412.41,
+    "sigma": 39.73,
+    "lot_size_y": 500.0,
+    "lot_size_x": 550.0,
+    "sector": "FMCG",
+    "backtest_return": 11.15,
+    "backtest_trades": 2,
+    "backtest_sharpe": 1.51
+  }
+]

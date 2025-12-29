@@ -1,0 +1,161 @@
+{
+  "source": "/home/maha_ai_developer/algo-project/StatArb/data/artifacts/backtest_full_results.json",
+  "total_pairs_tested": 7,
+  "winning_pairs": 2,
+  "losing_pairs": 5,
+  "win_rate": 28.6,
+  "total_return_pct": 20.83,
+  "avg_return_pct": 2.98,
+  "best_pair": {
+    "pair": "NESTLEIND-TATACONSUM",
+    "leg1": "NESTLEIND",
+    "leg2": "TATACONSUM",
+    "sector": "FMCG",
+    "train_days": 297,
+    "train_start": "2024-01-01",
+    "train_end": "2025-03-07",
+    "beta": 0.7434,
+    "intercept": 412.41,
+    "sigma": 39.73,
+    "r_squared": 0.745,
+    "test_days": 199,
+    "test_start": "2025-03-10",
+    "test_end": "2025-12-29",
+    "test_z_min": -2.81,
+    "test_z_max": 0.6,
+    "test_z_entries": 5,
+    "trades": 2,
+    "winning": 2,
+    "losing": 0,
+    "return_pct": 11.15,
+    "win_rate": 100.0,
+    "avg_pnl": 29064.0,
+    "avg_holding_days": 14.0,
+    "profit_factor": 10.0,
+    "sharpe_ratio": 1.51,
+    "max_drawdown_pct": 0.25,
+    "lot_size_y": 500,
+    "lot_size_x": 550
+  },
+  "worst_pair": {
+    "pair": "AXISBANK-SBIN",
+    "error": "Training R\u00b2=0.366 < 0.4",
+    "r_squared": 0.3655623164174561
+  },
+  "sectors_tested": [
+    "PHARMA",
+    "BANK",
+    "FMCG",
+    "UNKNOWN"
+  ],
+  "top_5_pairs": [
+    {
+      "pair": "NESTLEIND-TATACONSUM",
+      "leg1": "NESTLEIND",
+      "leg2": "TATACONSUM",
+      "sector": "FMCG",
+      "train_days": 297,
+      "train_start": "2024-01-01",
+      "train_end": "2025-03-07",
+      "beta": 0.7434,
+      "intercept": 412.41,
+      "sigma": 39.73,
+      "r_squared": 0.745,
+      "test_days": 199,
+      "test_start": "2025-03-10",
+      "test_end": "2025-12-29",
+      "test_z_min": -2.81,
+      "test_z_max": 0.6,
+      "test_z_entries": 5,
+      "trades": 2,
+      "winning": 2,
+      "losing": 0,
+      "return_pct": 11.15,
+      "win_rate": 100.0,
+      "avg_pnl": 29064.0,
+      "avg_holding_days": 14.0,
+      "profit_factor": 10.0,
+      "sharpe_ratio": 1.51,
+      "max_drawdown_pct": 0.25,
+      "lot_size_y": 500,
+      "lot_size_x": 550
+    },
+    {
+      "pair": "CIPLA-SUNPHARMA",
+      "leg1": "CIPLA",
+      "leg2": "SUNPHARMA",
+      "sector": "PHARMA",
+      "train_days": 297,
+      "train_start": "2024-01-01",
+      "train_end": "2025-03-07",
+      "beta": 0.3726,
+      "intercept": 867.7,
+      "sigma": 59.51,
+      "r_squared": 0.517,
+      "test_days": 199,
+      "test_start": "2025-03-10",
+      "test_end": "2025-12-29",
+      "test_z_min": -1.75,
+      "test_z_max": 2.79,
+      "test_z_entries": 1,
+      "trades": 1,
+      "winning": 1,
+      "losing": 0,
+      "return_pct": 9.68,
+      "win_rate": 100.0,
+      "avg_pnl": 49614.0,
+      "avg_holding_days": 6.0,
+      "profit_factor": 10.0,
+      "sharpe_ratio": 1.1,
+      "max_drawdown_pct": 0.25,
+      "lot_size_y": 375,
+      "lot_size_x": 350
+    },
+    {
+      "pair": "AXISBANK-SBIN",
+      "error": "Training R\u00b2=0.366 < 0.4",
+      "r_squared": 0.3655623164174561
+    },
+    {
+      "pair": "KOTAKBANK-HDFCBANK",
+      "error": "Training R\u00b2=0.193 < 0.4",
+      "r_squared": 0.1932155828644611
+    },
+    {
+      "pair": "KOTAKBANK-ICICIBANK",
+      "error": "Training R\u00b2=0.085 < 0.4",
+      "r_squared": 0.08515378052133778
+    }
+  ],
+  "ai_insights": {
+    "overall_assessment": "The strategy is currently in a highly experimental phase and is statistically insignificant for live deployment. Testing on only 7 pairs with a total of 3 executed trades creates a 'small sample size bias' that renders the high win rate (100%) and Sharpe ratios unreliable. While the individual trade logic on winning pairs (Nestle/Tata, Cipla/SunPharma) shows promise with returns ~10%, the strategy fails to identify enough viable opportunities, and the low R-squared threshold (<0.4 rejected but 0.5 accepted) indicates weak correlation standards compared to industry norms. The presence of future dates (Test End: Dec 2025) suggests this is a simulation or has serious data labeling errors.",
+    "benchmark_comparison": "The 2.98% average return across all pairs lags behind the industry standard of 6-11% annualized excess returns for statistical arbitrage. However, the ~10% return on winning pairs aligns with top-tier performance (Gatev et al. benchmark). The 100% trade win rate is unrealistic compared to the typical 60-70% range for mean-reversion strategies, signaling overfitting or lack of data. The 28.6% pair selection success rate is normal (pairs trading requires filtering thousands of candidates), but starting with only 7 candidates is the critical flaw.",
+    "strengths": [
+      "High Profit Factor (10.0) on winning pairs, though likely an artifact of zero losses in a tiny sample.",
+      "Good Sector Selection: FMCG and Pharma are defensive sectors often displaying stable cointegration suitable for pairs trading.",
+      "Strong individual pair performance: NESTLEIND-TATACONSUM (Sharpe 1.51) exceeds the industry benchmark of ~1.35.",
+      "Clear separation of Training and Testing periods (conceptually), despite the future date anomaly."
+    ],
+    "weaknesses": [
+      "Extreme Small Sample Size: 7 pairs tested and only 3 trades generated is insufficient for statistical validity (need 30+ trades minimum).",
+      "Low Correlation Standards: The strategy accepts pairs with R-squared ~0.5, whereas industry standards typically require Correlation > 0.8 (R-squared > 0.64) or strict Cointegration (p-value < 0.05).",
+      "Data Integrity Issues: The 'Test' period spans March 2025 to Dec 2025, which is in the future relative to the current date (Dec 2024), implying a simulation or error.",
+      "Low Trade Frequency: Averaging 1.5 trades per year per winning pair is too low to cover capital costs or generate meaningful alpha."
+    ],
+    "recommendations": [
+      "Expand the Pair Universe: Test against the entire Nifty 100 or 500 universe (approx. 12,000+ combinations) to find a statistically significant set of cointegrated pairs.",
+      "Stricter Filtering: Raise the minimum R-squared threshold to 0.64 (Correlation 0.8) and implement the Augmented Dickey-Fuller (ADF) test to ensure stationarity.",
+      "Increase Trade Frequency: Relax entry z-score slightly (e.g., to +/- 2.0) or check intraday data to capture more mean-reversion opportunities.",
+      "Validate Data: Correct the date range to use actual historical data (e.g., 2020-2024) to ensure no look-ahead bias affects the results.",
+      "Risk Management: Implement a 'max holding period' rule to force exit if convergence doesn't happen within X days, preventing dead capital."
+    ],
+    "live_trading_readiness": "NOT_READY",
+    "confidence_score": 0.85,
+    "research_sources": [
+      "Gatev, E., Goetzmann, W. N., & Rouwenhorst, K. G. (2006). Pairs Trading: Performance of a Relative-Value Arbitrage Rule. Review of Financial Studies.",
+      "Yale Department of Economics (2024). Examining Pairs Trading Profitability.",
+      "QuantifiedStrategies.com: Pairs Trading Strategy \u2013 Backtest and Statistics.",
+      "Investopedia: Pairs Trading Strategy Benchmarks and Correlation Requirements."
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 4.14,
+      "profit_growth_3yr_avg": 2.0,
+      "roe_latest": 15.0,
+      "roce_latest": 19.9,
+      "pe_ratio": 21.0,
+      "debt_to_equity": 0.1,
+      "beta": 0.71
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 17000,
+      "growth_rate_projection": 8.0,
+      "shares_outstanding_cr": 1049,
+      "net_debt_cr": -26665,
+      "tax_rate": 24.5
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Wipro is backed by the Premji family, known for the highest standards of corporate governance, ethics, and philanthropy (Azim Premji Foundation). The company maintains a strong reputation for transparency and shareholder-friendly policies."
+    }
+  },
+  "_cached_at": "2025-12-24T22:06:47.429899",
+  "_symbol": "WIPRO"
+}

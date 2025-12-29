@@ -1,0 +1,699 @@
+[
+  {
+    "pair": "AXISBANK-SBIN",
+    "leg1": "AXISBANK",
+    "leg2": "SBIN",
+    "sector": "BANK",
+    "beta": 0.725,
+    "sigma": 59.15,
+    "return_pct": 79.44,
+    "trades": 4,
+    "win_rate": 100.0,
+    "sharpe_ratio": 1.72,
+    "max_drawdown": 49560.0,
+    "profit_factor": 10.0,
+    "avg_days": 16.2,
+    "trade_log": [
+      {
+        "entry_date": "2024-01-11",
+        "exit_date": "2024-01-24",
+        "direction": "SHORT",
+        "entry_z": 2.02,
+        "exit_z": 0.92,
+        "pnl": 72517.59,
+        "days": 9,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2024-06-27",
+        "exit_date": "2024-07-25",
+        "direction": "SHORT",
+        "entry_z": 2.04,
+        "exit_z": 0.07,
+        "pnl": 134894.65,
+        "days": 19,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2024-09-20",
+        "exit_date": "2024-10-03",
+        "direction": "SHORT",
+        "entry_z": 2.06,
+        "exit_z": 0.73,
+        "pnl": 92038.78,
+        "days": 8,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2025-01-17",
+        "exit_date": "2025-02-27",
+        "direction": "LONG",
+        "entry_z": -2.02,
+        "exit_z": -0.85,
+        "pnl": 97767.88,
+        "days": 29,
+        "reason": "TP"
+      }
+    ]
+  },
+  {
+    "pair": "CIPLA-SUNPHARMA",
+    "leg1": "CIPLA",
+    "leg2": "SUNPHARMA",
+    "sector": "PHARMA",
+    "beta": 0.34,
+    "sigma": 56.13,
+    "return_pct": 70.61,
+    "trades": 5,
+    "win_rate": 100.0,
+    "sharpe_ratio": 1.68,
+    "max_drawdown": 24373.42,
+    "profit_factor": 10.0,
+    "avg_days": 7.4,
+    "trade_log": [
+      {
+        "entry_date": "2024-06-14",
+        "exit_date": "2024-06-26",
+        "direction": "SHORT",
+        "entry_z": 2.15,
+        "exit_z": 0.59,
+        "pnl": 54054.84,
+        "days": 7,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2024-10-30",
+        "exit_date": "2024-10-31",
+        "direction": "LONG",
+        "entry_z": -2.5,
+        "exit_z": -0.1,
+        "pnl": 83237.89,
+        "days": 1,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2025-01-24",
+        "exit_date": "2025-01-31",
+        "direction": "LONG",
+        "entry_z": -2.44,
+        "exit_z": -0.75,
+        "pnl": 89734.08,
+        "days": 5,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2025-08-28",
+        "exit_date": "2025-09-22",
+        "direction": "SHORT",
+        "entry_z": 2.0,
+        "exit_z": 0.97,
+        "pnl": 57392.07,
+        "days": 17,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2025-10-20",
+        "exit_date": "2025-10-30",
+        "direction": "SHORT",
+        "entry_z": 2.43,
+        "exit_z": 0.58,
+        "pnl": 68608.77,
+        "days": 7,
+        "reason": "TP"
+      }
+    ]
+  },
+  {
+    "pair": "CIPLA-DRREDDY",
+    "leg1": "CIPLA",
+    "leg2": "DRREDDY",
+    "sector": "PHARMA",
+    "beta": 0.622,
+    "sigma": 58.81,
+    "return_pct": 48.56,
+    "trades": 4,
+    "win_rate": 100.0,
+    "sharpe_ratio": 1.6,
+    "max_drawdown": 48522.5,
+    "profit_factor": 10.0,
+    "avg_days": 10.5,
+    "trade_log": [
+      {
+        "entry_date": "2024-01-01",
+        "exit_date": "2024-01-23",
+        "direction": "LONG",
+        "entry_z": -3.24,
+        "exit_z": -0.24,
+        "pnl": 117620.39,
+        "days": 16,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2024-01-30",
+        "exit_date": "2024-02-05",
+        "direction": "LONG",
+        "entry_z": -2.16,
+        "exit_z": -0.71,
+        "pnl": 38565.58,
+        "days": 4,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2024-09-17",
+        "exit_date": "2024-10-11",
+        "direction": "SHORT",
+        "entry_z": 2.2,
+        "exit_z": 0.98,
+        "pnl": 40380.17,
+        "days": 17,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2025-10-20",
+        "exit_date": "2025-10-28",
+        "direction": "SHORT",
+        "entry_z": 2.11,
+        "exit_z": 0.83,
+        "pnl": 46227.28,
+        "days": 5,
+        "reason": "TP"
+      }
+    ]
+  },
+  {
+    "pair": "KOTAKBANK-HDFCBANK",
+    "leg1": "KOTAKBANK",
+    "leg2": "HDFCBANK",
+    "sector": "BANK",
+    "beta": 1.507,
+    "sigma": 93.58,
+    "return_pct": 32.31,
+    "trades": 3,
+    "win_rate": 100.0,
+    "sharpe_ratio": 1.48,
+    "max_drawdown": 32954.6,
+    "profit_factor": 10.0,
+    "avg_days": 16.7,
+    "trade_log": [
+      {
+        "entry_date": "2024-05-03",
+        "exit_date": "2024-05-07",
+        "direction": "LONG",
+        "entry_z": -2.07,
+        "exit_z": -0.92,
+        "pnl": 40055.34,
+        "days": 2,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2024-12-02",
+        "exit_date": "2025-01-03",
+        "direction": "LONG",
+        "entry_z": -2.15,
+        "exit_z": -0.79,
+        "pnl": 47399.98,
+        "days": 23,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2025-03-24",
+        "exit_date": "2025-05-05",
+        "direction": "SHORT",
+        "entry_z": 2.4,
+        "exit_z": 0.33,
+        "pnl": 74113.35,
+        "days": 25,
+        "reason": "TP"
+      }
+    ]
+  },
+  {
+    "pair": "KOTAKBANK-ICICIBANK",
+    "leg1": "KOTAKBANK",
+    "leg2": "ICICIBANK",
+    "sector": "BANK",
+    "beta": 0.97,
+    "sigma": 109.39,
+    "return_pct": 26.51,
+    "trades": 3,
+    "win_rate": 100.0,
+    "sharpe_ratio": 1.72,
+    "max_drawdown": 21120.0,
+    "profit_factor": 10.0,
+    "avg_days": 18.7,
+    "trade_log": [
+      {
+        "entry_date": "2024-01-01",
+        "exit_date": "2024-01-23",
+        "direction": "SHORT",
+        "entry_z": 2.33,
+        "exit_z": 0.93,
+        "pnl": 58820.82,
+        "days": 16,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2024-05-03",
+        "exit_date": "2024-05-17",
+        "direction": "LONG",
+        "entry_z": -2.24,
+        "exit_z": -0.77,
+        "pnl": 61647.3,
+        "days": 10,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2024-10-30",
+        "exit_date": "2024-12-13",
+        "direction": "LONG",
+        "entry_z": -2.04,
+        "exit_z": -1.68,
+        "pnl": 12083.15,
+        "days": 30,
+        "reason": "TIME"
+      }
+    ]
+  },
+  {
+    "pair": "ICICIBANK-HDFCBANK",
+    "leg1": "ICICIBANK",
+    "leg2": "HDFCBANK",
+    "sector": "BANK",
+    "beta": 1.319,
+    "sigma": 50.77,
+    "return_pct": 21.79,
+    "trades": 7,
+    "win_rate": 42.9,
+    "sharpe_ratio": 0.73,
+    "max_drawdown": 57656.28,
+    "profit_factor": 2.51,
+    "avg_days": 1.4,
+    "trade_log": [
+      {
+        "entry_date": "2024-01-01",
+        "exit_date": "2024-01-02",
+        "direction": "LONG",
+        "entry_z": -4.6,
+        "exit_z": -4.95,
+        "pnl": -31993.53,
+        "days": 1,
+        "reason": "SL"
+      },
+      {
+        "entry_date": "2024-01-03",
+        "exit_date": "2024-01-04",
+        "direction": "LONG",
+        "entry_z": -4.57,
+        "exit_z": -4.75,
+        "pnl": -19385.17,
+        "days": 1,
+        "reason": "SL"
+      },
+      {
+        "entry_date": "2024-01-05",
+        "exit_date": "2024-01-08",
+        "direction": "LONG",
+        "entry_z": -4.51,
+        "exit_z": -4.49,
+        "pnl": -6277.58,
+        "days": 1,
+        "reason": "SL"
+      },
+      {
+        "entry_date": "2024-01-09",
+        "exit_date": "2024-01-10",
+        "direction": "LONG",
+        "entry_z": -4.37,
+        "exit_z": -4.18,
+        "pnl": 5945.37,
+        "days": 1,
+        "reason": "SL"
+      },
+      {
+        "entry_date": "2024-01-11",
+        "exit_date": "2024-01-12",
+        "direction": "LONG",
+        "entry_z": -4.13,
+        "exit_z": -3.78,
+        "pnl": 16790.56,
+        "days": 1,
+        "reason": "SL"
+      },
+      {
+        "entry_date": "2024-01-15",
+        "exit_date": "2024-01-16",
+        "direction": "LONG",
+        "entry_z": -4.07,
+        "exit_z": -4.17,
+        "pnl": -14275.55,
+        "days": 1,
+        "reason": "SL"
+      },
+      {
+        "entry_date": "2024-01-17",
+        "exit_date": "2024-01-23",
+        "direction": "LONG",
+        "entry_z": -2.86,
+        "exit_z": -0.5,
+        "pnl": 158121.36,
+        "days": 4,
+        "reason": "TP"
+      }
+    ]
+  },
+  {
+    "pair": "BAJAJFINSV-HDFCLIFE",
+    "leg1": "BAJAJFINSV",
+    "leg2": "HDFCLIFE",
+    "sector": "FINANCE",
+    "beta": 2.181,
+    "sigma": 108.1,
+    "return_pct": 18.49,
+    "trades": 6,
+    "win_rate": 83.3,
+    "sharpe_ratio": 1.56,
+    "max_drawdown": 17626.61,
+    "profit_factor": 8.42,
+    "avg_days": 11.2,
+    "trade_log": [
+      {
+        "entry_date": "2024-07-25",
+        "exit_date": "2024-08-08",
+        "direction": "LONG",
+        "entry_z": -2.2,
+        "exit_z": -3.04,
+        "pnl": -12461.11,
+        "days": 10,
+        "reason": "SL"
+      },
+      {
+        "entry_date": "2024-08-09",
+        "exit_date": "2024-09-02",
+        "direction": "LONG",
+        "entry_z": -2.7,
+        "exit_z": -0.97,
+        "pnl": 22166.04,
+        "days": 15,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2024-11-21",
+        "exit_date": "2024-12-03",
+        "direction": "LONG",
+        "entry_z": -2.05,
+        "exit_z": -0.88,
+        "pnl": 14743.66,
+        "days": 8,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2025-02-18",
+        "exit_date": "2025-03-11",
+        "direction": "SHORT",
+        "entry_z": 2.07,
+        "exit_z": 0.89,
+        "pnl": 14870.6,
+        "days": 14,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2025-04-21",
+        "exit_date": "2025-04-30",
+        "direction": "SHORT",
+        "entry_z": 2.13,
+        "exit_z": 0.09,
+        "pnl": 26387.31,
+        "days": 7,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2025-10-21",
+        "exit_date": "2025-11-11",
+        "direction": "SHORT",
+        "entry_z": 2.1,
+        "exit_z": 0.03,
+        "pnl": 26751.76,
+        "days": 13,
+        "reason": "TP"
+      }
+    ]
+  },
+  {
+    "pair": "CIPLA-APOLLOHOSP",
+    "leg1": "CIPLA",
+    "leg2": "APOLLOHOSP",
+    "sector": "PHARMA",
+    "beta": 0.074,
+    "sigma": 59.42,
+    "return_pct": 18.01,
+    "trades": 4,
+    "win_rate": 75.0,
+    "sharpe_ratio": 0.41,
+    "max_drawdown": 268450.0,
+    "profit_factor": 1.52,
+    "avg_days": 13.8,
+    "trade_log": [
+      {
+        "entry_date": "2024-01-01",
+        "exit_date": "2024-01-23",
+        "direction": "LONG",
+        "entry_z": -2.8,
+        "exit_z": -0.64,
+        "pnl": -172099.05,
+        "days": 16,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2024-01-29",
+        "exit_date": "2024-02-05",
+        "direction": "LONG",
+        "entry_z": -2.07,
+        "exit_z": -0.32,
+        "pnl": 112428.93,
+        "days": 5,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2024-06-18",
+        "exit_date": "2024-06-24",
+        "direction": "SHORT",
+        "entry_z": 2.05,
+        "exit_z": 0.83,
+        "pnl": 48118.35,
+        "days": 4,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2024-08-28",
+        "exit_date": "2024-10-10",
+        "direction": "SHORT",
+        "entry_z": 2.11,
+        "exit_z": 1.9,
+        "pnl": 101594.47,
+        "days": 30,
+        "reason": "TIME"
+      }
+    ]
+  },
+  {
+    "pair": "LT-ADANIPORTS",
+    "leg1": "LT",
+    "leg2": "ADANIPORTS",
+    "sector": "INFRA",
+    "beta": 0.945,
+    "sigma": 159.23,
+    "return_pct": 10.69,
+    "trades": 3,
+    "win_rate": 66.7,
+    "sharpe_ratio": 0.87,
+    "max_drawdown": 29205.0,
+    "profit_factor": 10.0,
+    "avg_days": 20.7,
+    "trade_log": [
+      {
+        "entry_date": "2024-11-25",
+        "exit_date": "2024-12-26",
+        "direction": "SHORT",
+        "entry_z": 2.01,
+        "exit_z": 0.78,
+        "pnl": 28186.3,
+        "days": 22,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2025-04-09",
+        "exit_date": "2025-04-28",
+        "direction": "LONG",
+        "entry_z": -2.17,
+        "exit_z": -0.92,
+        "pnl": 27472.65,
+        "days": 10,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2025-10-31",
+        "exit_date": "2025-12-15",
+        "direction": "SHORT",
+        "entry_z": 2.07,
+        "exit_z": 2.09,
+        "pnl": -2231.04,
+        "days": 30,
+        "reason": "TIME"
+      }
+    ]
+  },
+  {
+    "pair": "DRREDDY-SUNPHARMA",
+    "leg1": "DRREDDY",
+    "leg2": "SUNPHARMA",
+    "sector": "PHARMA",
+    "beta": 0.235,
+    "sigma": 60.58,
+    "return_pct": 8.0,
+    "trades": 3,
+    "win_rate": 66.7,
+    "sharpe_ratio": 1.12,
+    "max_drawdown": 21525.0,
+    "profit_factor": 10.0,
+    "avg_days": 22.0,
+    "trade_log": [
+      {
+        "entry_date": "2024-07-15",
+        "exit_date": "2024-08-28",
+        "direction": "SHORT",
+        "entry_z": 2.07,
+        "exit_z": 1.87,
+        "pnl": 22008.09,
+        "days": 30,
+        "reason": "TIME"
+      },
+      {
+        "entry_date": "2025-02-27",
+        "exit_date": "2025-04-16",
+        "direction": "LONG",
+        "entry_z": -2.02,
+        "exit_z": -1.66,
+        "pnl": -2566.63,
+        "days": 30,
+        "reason": "TIME"
+      },
+      {
+        "entry_date": "2025-05-05",
+        "exit_date": "2025-05-13",
+        "direction": "LONG",
+        "entry_z": -2.0,
+        "exit_z": -0.88,
+        "pnl": 20559.71,
+        "days": 6,
+        "reason": "TP"
+      }
+    ]
+  },
+  {
+    "pair": "NESTLEIND-TATACONSUM",
+    "leg1": "NESTLEIND",
+    "leg2": "TATACONSUM",
+    "sector": "FMCG",
+    "beta": 0.7,
+    "sigma": 41.15,
+    "return_pct": 1.86,
+    "trades": 9,
+    "win_rate": 100.0,
+    "sharpe_ratio": 2.0,
+    "max_drawdown": 915.0,
+    "profit_factor": 10.0,
+    "avg_days": 5.9,
+    "trade_log": [
+      {
+        "entry_date": "2024-01-01",
+        "exit_date": "2024-01-02",
+        "direction": "SHORT",
+        "entry_z": 4.33,
+        "exit_z": 3.85,
+        "pnl": 386.85,
+        "days": 1,
+        "reason": "SL"
+      },
+      {
+        "entry_date": "2024-01-03",
+        "exit_date": "2024-01-04",
+        "direction": "SHORT",
+        "entry_z": 3.35,
+        "exit_z": 3.25,
+        "pnl": 167.97,
+        "days": 1,
+        "reason": "SL"
+      },
+      {
+        "entry_date": "2024-01-05",
+        "exit_date": "2024-01-12",
+        "direction": "SHORT",
+        "entry_z": 2.75,
+        "exit_z": 0.72,
+        "pnl": 2118.48,
+        "days": 5,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2024-03-27",
+        "exit_date": "2024-04-08",
+        "direction": "SHORT",
+        "entry_z": 2.07,
+        "exit_z": 0.46,
+        "pnl": 1770.18,
+        "days": 7,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2024-07-01",
+        "exit_date": "2024-07-03",
+        "direction": "SHORT",
+        "entry_z": 2.03,
+        "exit_z": 0.96,
+        "pnl": 1254.19,
+        "days": 2,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2024-07-09",
+        "exit_date": "2024-07-19",
+        "direction": "SHORT",
+        "entry_z": 2.02,
+        "exit_z": 0.82,
+        "pnl": 1337.67,
+        "days": 7,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2024-09-26",
+        "exit_date": "2024-10-09",
+        "direction": "SHORT",
+        "entry_z": 2.06,
+        "exit_z": 0.77,
+        "pnl": 374.97,
+        "days": 8,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2025-05-02",
+        "exit_date": "2025-05-23",
+        "direction": "LONG",
+        "entry_z": -2.06,
+        "exit_z": -0.85,
+        "pnl": 1132.96,
+        "days": 15,
+        "reason": "TP"
+      },
+      {
+        "entry_date": "2025-08-08",
+        "exit_date": "2025-08-20",
+        "direction": "LONG",
+        "entry_z": -2.02,
+        "exit_z": -0.66,
+        "pnl": 763.74,
+        "days": 7,
+        "reason": "TP"
+      }
+    ]
+  }
+]
